@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selenium Practice Page</title>
+  </head>
+  <style>
+    * {
+        text-align: center;
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        textarea,
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+  <body>
+    <h1>Selenium Practice Page</h1>
+
+    <!-- Text Input -->
+    <label for="text-input">Text Input:</label>
+    <input type="text" id="text-input" name="text_input" /><br /><br />
+
+    <!-- Password Input -->
+    <label for="password-input">Password Input:</label>
+    <input
+      type="password"
+      id="password-input"
+      name="password_input"
+    /><br /><br />
+
+    <!-- Number Input -->
+    <label for="number-input">Number Input:</label>
+    <input type="number" id="number-input" name="number_input" /><br /><br />
+
+    <!-- Email Input -->
+    <label for="email-input">Email Input:</label>
+    <input type="email" id="email-input" name="email_input" /><br /><br />
+
+    <!-- Checkbox -->
+    <label for="checkbox">Checkbox:</label>
+    <input type="checkbox" id="checkbox" name="checkbox" value="check_me" />
+    Check me<br /><br />
+
+    <!-- Radio Buttons -->
+    <label>Radio Buttons:</label><br />
+    <input type="radio" id="radio1" name="radio_group" value="option1" /> Option
+    1<br />
+    <input type="radio" id="radio2" name="radio_group" value="option2" /> Option
+    2<br /><br />
+
+    <!-- Select Dropdown -->
+    <label for="select-dropdown">Select Dropdown:</label>
+    <select id="select-dropdown" name="select_dropdown">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option></select
+    ><br /><br />
+
+    <!-- Textarea -->
+    <label for="textarea">Textarea:</label><br />
+    <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea
+    ><br /><br />
+
+    <!-- File Input -->
+    <label for="file-input">File Input:</label>
+    <input type="file" id="file-input" name="file_input" />
+    <button type="button" id="clear-file">Clear</button><br /><br />
+
+    <!-- JavaScript to clear the file input field -->
+    <script>
+        document.getElementById("clear-file").addEventListener("click", function () {
+            var fileInput = document.getElementById("file-input");
+            fileInput.value = ""; // Reset the file input value
+        });
+    </script>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit" id="submit-button" />
+  </body>
+</html>
